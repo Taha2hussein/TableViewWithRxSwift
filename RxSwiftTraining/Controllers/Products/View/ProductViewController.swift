@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import RxRelay
-import RxReachability
 import RxCocoa
 
 class ProductViewController: BaseViewController {
@@ -73,7 +72,8 @@ class ProductViewController: BaseViewController {
         Observable.zip(productTableView
                         .rx
                         .itemSelected,productTableView.rx.modelSelected(Datum.self)).bind {  selectedIndex, product in
-            
+            let todoViewController = UIStoryboard.init(name: "todoView", bundle: nil).instantiateViewController(withIdentifier: "TodoViewController")as! TodoViewController
+            self.navigationController?.pushViewController(todoViewController, animated: true)
             print(selectedIndex, product.name ?? "")
         }
         .disposed(by: disopseBag)
@@ -90,6 +90,5 @@ class ProductViewController: BaseViewController {
 //            //
 //        }.disposed(by: disopseBag)
 
-        self.productTableView.rx.
     }
 }

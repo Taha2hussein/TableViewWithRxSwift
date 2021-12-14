@@ -13,3 +13,4 @@ class State {
     var isLoading = BehaviorRelay<Bool>(value: false)
     var isProductTableViewHide = BehaviorRelay<Bool>(value:false)
 }
+
