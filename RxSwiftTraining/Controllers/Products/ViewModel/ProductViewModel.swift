@@ -10,21 +10,20 @@ import RxSwift
 import Alamofire
 import RxRelay
 
-//protocol output {
-//    var productSubject : PublishSubject <[Datum]> {get}
-//}
 
 class ProductViewModel  : UseCaseProtocols {
-   
+    
+
     var productSubject =  PublishSubject<[Datum]>()
     var page_Pagination = BehaviorRelay<Int>(value:0)
+    private var disposeBag = DisposeBag()
     var state = State()
     var productSubjectObservable: Observable<[Datum]> {
         return productSubject
     }
-    
-   
-    func fetchProduct() {
+     
+  
+    func fetchProduct(page_Pagination:Int) {
         
         state.isLoading.accept(true)
         let parameters = ["page" : page_Pagination]
@@ -38,6 +37,7 @@ class ProductViewModel  : UseCaseProtocols {
                 print(branchesModel)
                 if branchesModel.data?.data?.count ?? 0 > 0 {
                     self.productSubject.onNext(branchesModel.data?.data ?? [])
+                    self.page_Pagination.accept(branchesModel.data?.total ?? 0)
                     self.state.isProductTableViewHide.accept(false)
                 } else {
                     self.state.isProductTableViewHide.accept(true)

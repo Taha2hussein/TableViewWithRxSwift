@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00342F772769EE5000734690 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00342F762769EE5000734690 /* Alert.swift */; };
 		0039C24E2767EFCA00030016 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0039C24C2767EFCA00030016 /* TodoList.xcdatamodeld */; };
 		0039C2512767EFF600030016 /* todoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0039C2502767EFF600030016 /* todoView.storyboard */; };
 		0039C2562767F03F00030016 /* TodoAccessProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0039C2552767F03F00030016 /* TodoAccessProvider.swift */; };
@@ -21,6 +22,11 @@
 		00503534275E1C360089E868 /* RxSwiftTrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00503533275E1C360089E868 /* RxSwiftTrainingTests.swift */; };
 		0050353E275E1C360089E868 /* RxSwiftTrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050353D275E1C360089E868 /* RxSwiftTrainingUITests.swift */; };
 		00503540275E1C360089E868 /* RxSwiftTrainingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050353F275E1C360089E868 /* RxSwiftTrainingUITestsLaunchTests.swift */; };
+		006594B42768EF5700F693B0 /* ResgisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006594B32768EF5700F693B0 /* ResgisterModel.swift */; };
+		006594B62768EF6800F693B0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006594B52768EF6800F693B0 /* RegisterViewModel.swift */; };
+		006594B82768EF7200F693B0 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006594B72768EF7200F693B0 /* Register.storyboard */; };
+		006594BA2768EF8700F693B0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006594B92768EF8700F693B0 /* RegisterViewController.swift */; };
+		006594BC2768F69000F693B0 /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006594BB2768F69000F693B0 /* KeyBoard.swift */; };
 		0093C0A7275FBC5B006D8EF3 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093C0A5275FBC5B006D8EF3 /* BaseURL.swift */; };
 		0093C0A8275FBC5B006D8EF3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093C0A6275FBC5B006D8EF3 /* NetworkManager.swift */; };
 		0093C0AB275FBD4F006D8EF3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093C0AA275FBD4F006D8EF3 /* ProductModel.swift */; };
@@ -30,6 +36,7 @@
 		0093C0B9275FBFA6006D8EF3 /* UseCaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093C0B8275FBFA6006D8EF3 /* UseCaseProtocols.swift */; };
 		0093C0BC275FD81C006D8EF3 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093C0BB275FD81C006D8EF3 /* State.swift */; };
 		0093C0BE275FDA2D006D8EF3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093C0BD275FDA2D006D8EF3 /* BaseViewController.swift */; };
+		00AC35602768E3C50018F81A /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AC355F2768E3C50018F81A /* CheckInternet.swift */; };
 		054BC3CC52634ACA58652375 /* Pods_RxSwiftTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D872F5F675370797861C5F /* Pods_RxSwiftTrainingTests.framework */; };
 		4607F7D7EF41B6EEAA8013AB /* Pods_RxSwiftTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D8673C212484AC924A1D89 /* Pods_RxSwiftTraining.framework */; };
 		4C8ECDE06CF93875A2BE8E5A /* Pods_RxSwiftTraining_RxSwiftTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F8C578FACC99FA13F53F01 /* Pods_RxSwiftTraining_RxSwiftTrainingUITests.framework */; };
@@ -53,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00342F762769EE5000734690 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		0039C24D2767EFCA00030016 /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
 		0039C2502767EFF600030016 /* todoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = todoView.storyboard; sourceTree = "<group>"; };
 		0039C2552767F03F00030016 /* TodoAccessProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAccessProvider.swift; sourceTree = "<group>"; };
@@ -71,6 +79,11 @@
 		00503539275E1C360089E868 /* RxSwiftTrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftTrainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0050353D275E1C360089E868 /* RxSwiftTrainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTrainingUITests.swift; sourceTree = "<group>"; };
 		0050353F275E1C360089E868 /* RxSwiftTrainingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTrainingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		006594B32768EF5700F693B0 /* ResgisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResgisterModel.swift; sourceTree = "<group>"; };
+		006594B52768EF6800F693B0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		006594B72768EF7200F693B0 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		006594B92768EF8700F693B0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		006594BB2768F69000F693B0 /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
 		0093C0A5275FBC5B006D8EF3 /* BaseURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		0093C0A6275FBC5B006D8EF3 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0093C0AA275FBD4F006D8EF3 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
@@ -80,6 +93,7 @@
 		0093C0B8275FBFA6006D8EF3 /* UseCaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProtocols.swift; sourceTree = "<group>"; };
 		0093C0BB275FD81C006D8EF3 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		0093C0BD275FDA2D006D8EF3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		00AC355F2768E3C50018F81A /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		5B8CDFA52FEB8490CB592749 /* Pods-RxSwiftTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTraining.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftTraining/Pods-RxSwiftTraining.release.xcconfig"; sourceTree = "<group>"; };
 		621F69EB492F75516A1A5F01 /* Pods-RxSwiftTraining-RxSwiftTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTraining-RxSwiftTrainingUITests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftTraining-RxSwiftTrainingUITests/Pods-RxSwiftTraining-RxSwiftTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8E6B9F2BA799E9EC68FBD6FC /* Pods-RxSwiftTrainingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTrainingTests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftTrainingTests/Pods-RxSwiftTrainingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00342F752769EE4400734690 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				00342F762769EE5000734690 /* Alert.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		0039C24A2767EF0500030016 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +230,8 @@
 		0050351B275E1C2F0089E868 /* RxSwiftTraining */ = {
 			isa = PBXGroup;
 			children = (
+				00342F752769EE4400734690 /* Extension */,
+				006594BD2768F85F00F693B0 /* Utils */,
 				0093C0BA275FD813006D8EF3 /* State */,
 				0093C0B5275FBF89006D8EF3 /* Use cases */,
 				0093C0A4275FBC47006D8EF3 /* Network Manger */,
@@ -258,6 +282,7 @@
 		00503551275E1CAB0089E868 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				006594AE2768EF2700F693B0 /* Register */,
 				0039C24B2767EF1300030016 /* Todo */,
 				0039C24A2767EF0500030016 /* Products */,
 			);
@@ -270,6 +295,59 @@
 				00503522275E1C2F0089E868 /* Main.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		006594AE2768EF2700F693B0 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				006594B22768EF4800F693B0 /* Model */,
+				006594B12768EF3F00F693B0 /* View Model */,
+				006594B02768EF3900F693B0 /* UI */,
+				006594AF2768EF3400F693B0 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		006594AF2768EF3400F693B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				006594B92768EF8700F693B0 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		006594B02768EF3900F693B0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				006594B72768EF7200F693B0 /* Register.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		006594B12768EF3F00F693B0 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				006594B52768EF6800F693B0 /* RegisterViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		006594B22768EF4800F693B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				006594B32768EF5700F693B0 /* ResgisterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		006594BD2768F85F00F693B0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0093C0BD275FDA2D006D8EF3 /* BaseViewController.swift */,
+				00AC355F2768E3C50018F81A /* CheckInternet.swift */,
+				006594BB2768F69000F693B0 /* KeyBoard.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		0093C0A4275FBC47006D8EF3 /* Network Manger */ = {
@@ -325,7 +403,6 @@
 			isa = PBXGroup;
 			children = (
 				0093C0BB275FD81C006D8EF3 /* State.swift */,
-				0093C0BD275FDA2D006D8EF3 /* BaseViewController.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -446,6 +523,8 @@
 				Base,
 			);
 			mainGroup = 00503510275E1C2F0089E868;
+			packageReferences = (
+			);
 			productRefGroup = 0050351A275E1C2F0089E868 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -466,6 +545,7 @@
 				00503526275E1C350089E868 /* Assets.xcassets in Resources */,
 				00503524275E1C2F0089E868 /* Main.storyboard in Resources */,
 				0039C2512767EFF600030016 /* todoView.storyboard in Resources */,
+				006594B82768EF7200F693B0 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,12 +675,18 @@
 			files = (
 				0093C0A8275FBC5B006D8EF3 /* NetworkManager.swift in Sources */,
 				0050351D275E1C2F0089E868 /* AppDelegate.swift in Sources */,
+				006594B42768EF5700F693B0 /* ResgisterModel.swift in Sources */,
 				0093C0AE275FBD76006D8EF3 /* ProductViewModel.swift in Sources */,
 				0093C0BC275FD81C006D8EF3 /* State.swift in Sources */,
+				006594BC2768F69000F693B0 /* KeyBoard.swift in Sources */,
 				0093C0B1275FBD96006D8EF3 /* ProductViewController.swift in Sources */,
+				00AC35602768E3C50018F81A /* CheckInternet.swift in Sources */,
+				00342F772769EE5000734690 /* Alert.swift in Sources */,
 				0093C0BE275FDA2D006D8EF3 /* BaseViewController.swift in Sources */,
+				006594B62768EF6800F693B0 /* RegisterViewModel.swift in Sources */,
 				0050351F275E1C2F0089E868 /* SceneDelegate.swift in Sources */,
 				0093C0B4275FBE6C006D8EF3 /* ProductCell.swift in Sources */,
+				006594BA2768EF8700F693B0 /* RegisterViewController.swift in Sources */,
 				0039C2562767F03F00030016 /* TodoAccessProvider.swift in Sources */,
 				0093C0B9275FBFA6006D8EF3 /* UseCaseProtocols.swift in Sources */,
 				0039C2622767F41500030016 /* TodoViewController.swift in Sources */,

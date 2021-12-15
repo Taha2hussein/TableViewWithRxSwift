@@ -9,7 +9,7 @@ import Foundation
 
 import RxSwift
 protocol UseCaseProtocols {
-    func fetchProduct()
+    func fetchProduct(page_Pagination:Int)
 }
 protocol TodoTasks{
     func fetchTodoTasks()

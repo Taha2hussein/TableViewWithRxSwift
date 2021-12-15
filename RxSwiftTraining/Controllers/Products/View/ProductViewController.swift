@@ -14,44 +14,66 @@ class ProductViewController: BaseViewController {
     
     @IBOutlet weak var productTableView: UITableView!
     
-
+    fileprivate let refreshControl = UIRefreshControl()
     var disopseBag = DisposeBag()
     var productViewModel = ProductViewModel()
-    var refresh = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        prepareUI()
+        bindRefreshControl()
         requestProduct()
         bindDataToTableView()
         subscribeToLoading()
         subscribeToHideTableView()
         selectProduct()
-        subscribetoRefresher()
     }
     
+ 
     
+//    private func prepareUI() {
+//
+//        // Preparing refreshcontrol
+//        refresh.attributedTitle = NSAttributedString(string: "")
+//        if #available(iOS 10.0, *) {
+//            productTableView.refreshControl = refresh
+//        } else {
+//            productTableView.addSubview(refresh)
+//        }
+//    }
+//
+    func bindRefreshControl(){
+        refreshControl.rx.controlEvent(.valueChanged)
+                    .subscribe(onNext: {[weak self]
+                        _ in
+                        self?.requestProduct()
+                        self?.refreshControl.endRefreshing()
+                    }).disposed(by: disposeBag)
+                
+        productTableView.addSubview(refreshControl)
+    }
     func requestProduct() {
-        productViewModel.fetchProduct()
+        productViewModel.fetchProduct(page_Pagination: self.productViewModel.page_Pagination.value)
     }
     
     func subscribeToHideTableView() {
-        productViewModel.state.isProductTableViewHide.subscribe(onNext: { (isLoading) in
+        productViewModel.state.isProductTableViewHide.subscribe(onNext: {[weak self] (isLoading) in
             if isLoading {
-                self.productTableView.isHidden = true
+                self?.productTableView.isHidden = true
                 
             } else {
-                self.productTableView.isHidden = false
+                self?.productTableView.isHidden = false
             }
         }).disposed(by: disopseBag)
     }
     
     func subscribeToLoading() {
-        productViewModel.state.isLoading.subscribe(onNext: { (isLoading) in
+        productViewModel.state.isLoading.subscribe(onNext: {[weak self] (isLoading) in
             if isLoading {
-                self.showLoading()
+                self?.showLoading()
                 
             } else {
-                self.HideLoading()
+                self?.HideLoading()
             }
         }).disposed(by: disopseBag)
     }
@@ -71,24 +93,11 @@ class ProductViewController: BaseViewController {
     func selectProduct() {
         Observable.zip(productTableView
                         .rx
-                        .itemSelected,productTableView.rx.modelSelected(Datum.self)).bind {  selectedIndex, product in
+                        .itemSelected,productTableView.rx.modelSelected(Datum.self)).bind { [weak self] selectedIndex, product in
             let todoViewController = UIStoryboard.init(name: "todoView", bundle: nil).instantiateViewController(withIdentifier: "TodoViewController")as! TodoViewController
-            self.navigationController?.pushViewController(todoViewController, animated: true)
+            self?.navigationController?.pushViewController(todoViewController, animated: true)
             print(selectedIndex, product.name ?? "")
         }
         .disposed(by: disopseBag)
-    }
-    
-    func subscribetoRefresher() {
-        //
-       
-        
-    }
-    
-    func paginationTableView() {
-//        productViewModel.page_Pagination.subscribe { page in
-//            //
-//        }.disposed(by: disopseBag)
-
     }
 }

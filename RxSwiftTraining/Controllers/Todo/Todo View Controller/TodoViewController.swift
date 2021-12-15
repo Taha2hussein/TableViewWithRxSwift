@@ -9,12 +9,11 @@ import UIKit
 import RxRelay
 import RxSwift
 import RxCocoa
-class TodoViewController: UIViewController {
+class TodoViewController: checkInternetViewController {
 
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     @IBOutlet weak var todoTableView: UITableView!
     
-    let disposeBag = DisposeBag()
     var TodoViewModelInstance = TodoViewModel()
     
     override func viewDidLoad() {
@@ -24,10 +23,22 @@ class TodoViewController: UIViewController {
         fetchData()
         deleteTask()
         setTaskAsCompleted()
+        selectTask()
     }
     
     func fetchData(){
         self.TodoViewModelInstance.fetchTodoTasks()
+    }
+    
+    func selectTask(){
+        Observable.zip(self.todoTableView.rx.itemSelected, self.todoTableView.rx.modelSelected(Todo.self)).bind{
+            todo , index in
+            
+            let todoViewController = UIStoryboard.init(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewController")as! RegisterViewController
+            
+            self.navigationController?.pushViewController(todoViewController, animated: true)
+            
+        }.disposed(by: self.disposeBag)
     }
     
     func bindTodoTasksTotableView(){
@@ -36,7 +47,6 @@ class TodoViewController: UIViewController {
             .rx
             .items(cellIdentifier: String(describing:  TodoTableViewCell.self),
                            cellType: TodoTableViewCell.self)) { row, model, cell in
-                print("items",model)
                 cell.configure(todo: model)
             }.disposed(by: disposeBag)
     }

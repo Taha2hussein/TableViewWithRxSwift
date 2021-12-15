@@ -22,7 +22,9 @@ target 'RxSwiftTraining' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'CleanyModal'
-#  pod 'RxReachability'
+  pod 'RxReachability'
+  pod 'RxKeyboard'
+  pod 'RxGesture'
 #  pod "RxPager"
 
 end
